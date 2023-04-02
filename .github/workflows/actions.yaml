@@ -27,6 +27,7 @@ jobs:
         env:
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
           
         run: python main.py
 
