@@ -10,17 +10,15 @@ def app():
     msg['From'] = os.environ["EMAIL_ADDRESS"]
     msg['To'] = "michaeligbomezie@gmail.com"
 
-    response = requests.get("https://research-questions-api.herokuapp.com/generaltrends/limit?limit=1")
+    response = requests.get("http://127.0.0.1:8000/predict")
     message = response.json()
-    #msg.set_content(message["tweet"])
-    msg.set_content("Tweet Extracted!")
+    msg.set_content(message["message"])
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
         smtp.login(os.environ["EMAIL_ADDRESS"], os.environ["EMAIL_PASSWORD"])
         smtp.send_message(msg)
 
     print("Daily Prediction Sucessful!")
-
 
 app()
 
