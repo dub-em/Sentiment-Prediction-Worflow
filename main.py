@@ -9,10 +9,8 @@ def app():
     msg['Subject'] = 'Update on Daily Prediction'
     msg['From'] = os.environ["EMAIL_ADDRESS"]
     msg['To'] = "michaeligbomezie@gmail.com"
-
-    #app endpoint: https://citizens-voice-h97mv.ondigitalocean.app/predict
     
-    response = requests.get("https://citizens-voice-h97mv.ondigitalocean.app/predict")
+    response = requests.get(os.environ["API_ENDPOINT"])
     message = response.json()
     msg.set_content(message["message"])
 
