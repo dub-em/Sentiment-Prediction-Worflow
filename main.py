@@ -10,7 +10,9 @@ def app():
     msg['From'] = os.environ["EMAIL_ADDRESS"]
     msg['To'] = "michaeligbomezie@gmail.com"
 
-    response = requests.get("http://127.0.0.1:8000/predict")
+    #app endpoint: https://citizens-voice-h97mv.ondigitalocean.app/predict
+    
+    response = requests.get("https://citizens-voice-h97mv.ondigitalocean.app/predict")
     message = response.json()
     msg.set_content(message["message"])
 
