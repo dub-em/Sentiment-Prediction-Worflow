@@ -18,8 +18,6 @@ def app():
         smtp.login(os.environ["EMAIL_ADDRESS"], os.environ["EMAIL_PASSWORD"])
         smtp.send_message(msg)
 
-    print("Daily Prediction Sucessful!")
-
 app()
 
 
