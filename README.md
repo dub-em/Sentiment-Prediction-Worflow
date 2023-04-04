@@ -5,6 +5,7 @@
 
 ### Purpose of this Project 
 + To call the endpoint of the API built, containerized (using Docker), and deployed (using Kubernetes in Digital Ocean) in the implementation of second Phase of the Election Campaign Application at exactly 05:00 UTC everyday, in order to trigger the daily sentiment prediction and topic extraction of tweet extracted from the Nigerian online Twitter space.
++ To forward the response gotten from the daily API call to a personal email, using in-built python email and smtp libraries.
 
 ### Reference GitHub Repositories
 + https://github.com/dub-em/Election-Campaign-Application
