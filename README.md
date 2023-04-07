@@ -15,6 +15,7 @@
 
 ### Duckerhub Repository
 + https://hub.docker.com/r/dub3m/citizens-voice
++ https://hub.docker.com/r/dub3m/ec-phase2-trigger-schedule
 
 ### Article
 + https://www.linkedin.com/pulse/citizens-sentiment-michael-igbomezie
