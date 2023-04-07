@@ -11,7 +11,8 @@ jobs:
     steps:
 
       - name: checkout repo content
-        uses: actions/checkout@v3 # checkout the repository content to github runner
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+                                  # change v2 to v3, if node.js 12 - node.js 16 deprecation error occurs in the future
 
       - name: setup python
         uses: actions/setup-python@v4
